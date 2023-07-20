@@ -1,0 +1,100 @@
+
+
+
+<div class="container1" *ngIf="!form">
+	<div class="sigup-info">
+		<form [formGroup]="formulario" (ngSubmit)="CadastrarConta()" class="signup-form">
+			<div class="cadastrar">
+            <h2>Cadastre-se</h2>
+                <label for="nome" class="label-user">Nome</label>
+                <input type="text" class="input-user"  formControlName="nome" required>
+                <label for="email" class="label-user">Telefone</label>
+                <input type="tel" class="input-user"  formControlName="telefone" required>
+                <label for="email" class="label-user">Email</label>
+                <input type="email" class="input-user"  formControlName="email" required>
+                <label for="senha" class="label-user">Senha</label>
+                <input type="password" class="input-user"  formControlName="senha" required>
+                <button type="submit" class="btn" [disabled]="!formulario.valid">Cadastrar</button>
+        	
+        </div>
+    </form>
+</div>
+<div class="cards">
+<img src="../../../assets/img/cardspng.png" alt="" class="card" >
+	<button (click)="formshow()">LogIn</button>
+</div>
+</div>
+
+<div class="container" *ngIf="form" >
+    <div class="cards">
+        <img src="../../../assets/img/cardspng.png" alt="" class="card">
+		<button (click)="formshow()">Cadastrar-se</button>
+    </div>
+    <div class="login-info">
+    <form (ngSubmit)="onSubmit()" class="login-form">
+		<h2>Login in</h2>
+        <div class="login">
+                <label for="email" class="label-user">Email:</label>
+                <input type="email" class="input-user"  [(ngModel)]="email" name="email">
+                <label for="senha" class="label-user">Senha</label>
+                <input type="password" class="input-user"  [(ngModel)]="senha" name="senha">
+                <button type="submit" class="btn">Login</button>
+        </div>
+    </form>
+    </div>
+</div>
+
+
+<!-- <div class="container" id="container">
+<div class="form-container sign-up-container">
+
+<form action="">
+	
+	<a onclick="history.back()"><i class="fa fa-close" id="close"></i></a>
+	<h1>Crie uma conta</h1>
+	<div class="social-container">
+		<a href="#" class="social"><i class="fa fa-facebook"></i></a>
+		<a href="#" class="social"><i class="fa fa-google"></i></a>
+		<a href="#" class="social"><i class="fa fa-linkedin"></i></a>
+	</div>
+	<span>ou use seu email para registro</span>
+	<input type="text" name="name" placeholder="Name">
+	<input type="email" name="email" placeholder="Email">
+	<input type="password" name="password" placeholder="Password">
+	<button>Cadastre-se</button>
+</form>
+</div>
+<div class="form-container sign-in-container">
+	<form action="#">
+		<h1>LogIn</h1>
+		<div class="social-container">
+		<a href="#" class="social"><i class="fa fa-facebook"></i></a>
+		<a href="#" class="social"><i class="fa fa-google"></i></a>
+		<a href="#" class="social"><i class="fa fa-linkedin"></i></a>
+	</div>
+	<span>ou use sua conta</span>
+	<input type="email" name="email" placeholder="Email">
+	<input type="password" name="password" placeholder="Password">
+	<a href="#">Esqueceu a senha</a>
+
+	<button>Login</button>
+	</form>
+</div>
+<div class="overlay-container">
+	<div class="overlay">
+		<div class="overlay-panel overlay-left">
+			<h1>Bem vindo de volta!</h1>
+			<p>Para ficar conectado conosco, por favor entre com suas informaçoes pessoais</p>
+			<button class="ghost" id="signIn">Login</button>
+		</div>
+		<div class="overlay-panel overlay-right">
+			
+	<a onclick="history.back()"><i class="fa fa-close" id="close"></i></a>
+			<h1>Olá, amigo!</h1>
+			<p>Entre com seus dados e começe a jornada conosco</p>
+			<button class="ghost" id="signUp">Cadastre-se</button>
+		</div>
+	</div>
+</div>
+</div> -->
+

@@ -1,0 +1,134 @@
+$primary-main-color: #18224a;
+$primary-text-color: #f1f1f0;
+$secondary-color: #992b36;
+$shadow-color:#080b17;
+$border: #364596;
+$second-text-color:#565d63;
+
+
+.back-btn{
+    button{
+    float: right;
+    margin: 10px;
+    width: 150px;
+    height:  30px;
+    background-color: $secondary-color;
+    border: none;
+    border-radius: 10px;
+}
+}
+
+
+table{
+    width: 40%;
+    height: 70vh;
+    border: 1px solid #001010;
+    position: absolute;
+    left: 50%;
+    top:40%; 
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+
+
+    td{
+        width: 33.3%;
+        height: 33.3%;
+        border-left: solid 3px $secondary-color;
+        text-align: center;
+    }
+    td:last-child{
+        border-left: solid 3px $secondary-color;
+        border-right: solid 3px $secondary-color;
+        
+    }
+    td img{
+    animation: updown 0.3s linear 1;
+    }
+    
+}
+@keyframes updown {
+  0% {
+    transform: translateY(-300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.info{
+
+    position:absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 76vh;
+    display: flex;
+    background-color: $secondary-color;
+    border-radius: 10px;
+    
+    h1{
+        color: $primary-text-color;
+        margin: 20px;
+    }
+    
+    form{
+        display: flex;
+        flex-direction: column;
+    }   
+    .aposta{
+        color: $primary-text-color;
+        font-size: 30px;
+        margin: 20px;
+        border: none;
+        display: flex;
+    }
+
+    button{
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    top: 70px;
+    left: 50%;
+    transform: translate(-50%);
+    }
+
+}
+
+
+@media  screen and (max-width: 699px) {
+    
+.back-btn{
+    position: relative;
+    
+    button{
+    float: right;
+    margin: 5px;
+    width: 150px;
+    height:  30px;
+    background-color: $secondary-color;
+    border: none;
+    border-radius: 10px;
+}
+}
+
+    table{
+        width: 95%;
+    }
+    .info{
+        font-size: 10px;
+        width: 95%;
+
+         
+        .aposta{
+        display: flex;
+        color: $primary-text-color;
+        font-size: 15px;
+        margin: 20px;
+        border: none;
+        }
+        button{
+
+            height: 120px;
+        }
+    
+    }
+}

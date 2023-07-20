@@ -1,0 +1,280 @@
+$background-color: #fff;
+$main-color:#0066cc;
+$primary-main-color: #18224a;
+$primary-text-color: #f1f1f0;
+$secondary-color: #992b36;
+$shadow-color:#080b17;
+$border: #364596;
+$second-text-color:#565d63;
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 800px;
+  height: 500px;
+  background-color: $primary-main-color;
+  h2{
+    margin-top: 30px;
+    text-align: center;
+    color:$secondary-color;
+  }
+  .cards{
+    grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+    .card{
+      filter: brightness(0.3) contrast(1.75);
+      width: 100%;
+    }
+    button{
+      position: absolute;
+      bottom: 30px;
+      background-color: $secondary-color;
+      width: 150px;
+      height: 40px;
+      border-radius: 10px;
+      border: none;
+
+      transition: 0.2s ease-in-out;
+    }
+    button:hover{
+      transform: scale(1.03);
+      filter: brightness(1.2);
+      
+    }
+  }
+  .login-info{
+    grid-column: 2/3;
+    box-shadow: -8px 0px 4px $secondary-color;
+    border-radius: 10px;
+
+
+      .login{
+          margin-top: 50px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .label-user{
+            // margin-top: 30px;
+            margin-bottom: 0px;
+            // align-self: start;
+            font-weight: bold;
+            font-size: 20px;
+          }
+
+          .label-user:nth-child(1){
+            margin-top: 50px;
+          }
+  
+          .input-user{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 80%;
+            height: 30px;
+            border: 10px;
+            border-bottom: solid 1px #000;
+            background-color: transparent;
+            outline: none;
+            color: $primary-text-color;
+            font-size: 20px;
+          }
+  
+  
+  
+          button{
+            position: absolute;
+            bottom: 30px;
+            background-color: $secondary-color;
+            width: 150px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+      transition: 0.2s ease-in-out;
+          }
+          button:hover{
+            transform: scale(1.03);
+            filter: brightness(1.2);
+          }
+        
+        }
+  }
+
+}
+
+
+.container1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 800px;
+  height: 500px;
+  // border-radius: 5px;
+  background-color: $primary-main-color;
+  // z-index: 10;
+  h2{
+    text-align: center;
+    margin-bottom: 5px;
+    color:$secondary-color;
+  }
+ 
+  .sigup-info{
+    grid-column: 1/2;
+    box-shadow: 8px 0px 4px $secondary-color;
+    border-radius: 10px;
+
+
+      .cadastrar{
+          margin-top: 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+        .label-user{
+          // margin-top: 30px;
+          margin-bottom: 0px;
+          // align-self: start;
+          font-weight: bold;
+          font-size: 20px;
+        }
+
+        .input-user{
+          margin-top: 20px;
+          margin-bottom: 20px;
+          width: 80%;
+          height: 30px;
+          border: 10px;
+          border-bottom: solid 1px #000;
+          background-color: transparent;
+          outline: none;
+          color: $primary-text-color;
+          font-size: 20px;
+        }
+
+
+
+        button{
+          background-color: $secondary-color;
+          width: 150px;
+          height: 40px;
+          border-radius: 10px;
+          border: none;
+          color:#000;
+          transition: 0.2s ease-in-out;
+        }
+        button:hover{
+          transform: scale(1.03);
+          filter: brightness(1.2);
+        }
+      
+      }
+  } 
+  .cards{
+    grid-column: 2/3;
+    display: flex;
+    justify-content: center;
+    img{
+      mix-blend-mode:multiply;
+      width: 100%;
+    }
+    button{
+      position: absolute;
+      bottom: 30px;
+      background-color: $secondary-color;
+      width: 150px;
+      height: 40px;
+      border-radius: 10px;
+      border: none;
+transition: 0.2s ease-in-out;
+    }
+    button:hover{
+      transform: scale(1.03);
+      filter: brightness(1.2);
+    }
+  }
+}
+
+@media  screen and (max-width:700px) {
+    
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+ 
+  .cards{
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    .card{
+        display: none;
+    }
+    button{
+      position: absolute;
+      bottom: -100px;
+    }
+  }
+  .login-info{
+    box-shadow: none;
+    width: 100%;
+
+      .login{
+         width: 100%;
+
+  
+          .input-user{
+            width: 100%;
+          }
+  
+  
+        
+        }
+  }
+
+}
+
+
+.container1 {
+  display: flex;
+  flex-direction: column;
+  width: 95vw;
+  .sigup-info{
+   
+    box-shadow: none;
+    width: 100%;
+
+      
+
+      .cadastrar{
+        width: 100%;
+
+  
+        .input-user{
+          width: 100%;
+        }
+      
+      }
+  }
+  .cards{
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    .card{
+        display: none;
+    }
+    button{
+      position: absolute;
+      bottom: -100px;
+    }
+}
+}}

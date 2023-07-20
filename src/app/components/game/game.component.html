@@ -1,0 +1,44 @@
+<div class="back-btn">
+  <button (click)="back()">Voltar</button>
+</div>
+
+<table>
+    <tr *ngFor="let linha of matriz">
+      <td *ngFor="let elemento of linha" >
+       <img [src]="'../../../assets/img/'+elemento+'.png'" alt="">
+      </td>
+    </tr>
+  </table>
+  
+  <div class="info">
+    <h1>Saldo Atual: {{ saldo.toFixed(2) }}</h1>
+    <form [formGroup]="apostaForm" (ngSubmit)="fazerAposta()">
+      <div class="aposta">
+        <label for="bets">Valor da Aposta:</label>
+        <select id="bets" formControlName="valorAposta">
+          <option value="0.50" selected>R$0,50</option>
+          <option value="1.00">R$1,00</option>
+          <option value="1.50">R$1,50</option>
+          <option value="2.00">R$2,00</option>
+          <option value="2.50">R$2,50</option>
+          <option value="3.00">R$3,00</option>
+          <option value="3.50">R$3,50</option>
+          <option value="4.00">R$4,00</option>
+          <option value="4.50">R$4,50</option>
+          <option value="5.00">R$5,00</option>
+          <option value="10.00">R$10,00</option>
+          <option value="15.00">R$15,00</option>
+          <option value="20.00">R$20,00</option>
+          <option value="25.00">R$25,00</option>
+          <option value="30.00">R$30,00</option>
+          <option value="35.00">R$35,00</option>
+          <option value="40.00">R$40,00</option>
+          <option value="45.00">R$45,00</option>
+          <option value="50.00">R$50,00</option>
+        </select>
+      </div>
+      <button type="submit">
+        <img src="../../../assets/img/button.png" alt="">
+      </button>
+    </form>
+  </div>

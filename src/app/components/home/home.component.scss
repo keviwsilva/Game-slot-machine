@@ -1,0 +1,661 @@
+$primary-main-color: #18224a;
+$primary-text-color: #f1f1f0;
+$secondary-color: #992b36;
+$shadow-color:#080b17;
+$border: #364596;
+$second-text-color:#565d63;
+
+
+header{
+    height: 100px;
+    width: 100%;
+    color: $primary-text-color;
+   
+    border-bottom: solid 1px $border;
+    .info{
+        height: 100%;
+        width: 75%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        display: flex;
+
+        h2{
+            position: absolute;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .buttons{
+            position: absolute;
+            right: -120px;
+            top: 50%;
+            height: 30px;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            
+
+            span{
+                
+                border-radius: 10px;
+                text-align: center;
+                padding-right:10px;
+                height: 100%;
+                width: 80px;
+                padding-left:10px;
+                justify-self: center;
+                padding-top: 8px;
+                cursor: pointer;
+                margin-right: 20px;
+            }
+
+            span:hover{
+                background-color: $secondary-color;
+                transform: scale(1.03);
+            }
+
+            label{
+                margin-right: 5px;
+            }
+
+            #deposit{
+                    width: 4%;
+                    height: 30px;
+                    margin-top: 10px;
+                    background-color: $secondary-color;
+                    color: $primary-text-color;
+                    border: none;
+                    border-radius: 10px;
+                    font-size: 15px;
+                    cursor: pointer;
+                    transition: 0.2s ease-in-out;
+
+                    option{
+                        border: 2px solid $secondary-color;
+                        padding: 5px;
+                        color: black;
+                        background-color: #fff;
+                    }
+                }
+                #deposit:hover{
+                    transform: scale(1.03);
+                    background-color: #b42e3c;
+                }
+            }
+        }
+
+    }
+
+
+main{
+    width: 75%;
+    height: 70vh;
+    display: grid;
+    grid-template: 1fr / 20% 1fr ;
+    gap: 8px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 15%);
+    
+    
+    aside{
+        grid-area: 1/1/2/2;
+        background-color: $primary-main-color;
+        color: $primary-text-color;
+        box-shadow:0px 1px 5px $shadow-color;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 20px;
+        border-bottom: solid 2px $border;
+        position: relative;
+        
+        span{
+            margin-top: 20px;
+        }
+        .play{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            top: 50px;
+            width: 80%;
+            height: 80px;
+            border-bottom: solid 2px $secondary-color;
+            display: flex;
+            flex-direction: row;
+
+            i{
+                color: $secondary-color;
+                font-size: 35px;
+                margin-right: 10px;
+                position: absolute;
+                top:40%;
+                transform: translateY(-50%);
+
+            }
+            i:hover{
+    
+                cursor: pointer;
+            }
+            i:hover + h2{
+                color: $secondary-color;
+            }
+
+            h2{
+                margin-left: 50px;
+                font-size: 50px;
+                margin-bottom: 5px;
+            }
+            h2:hover{
+    
+                color: $secondary-color;
+                cursor: pointer;
+            }
+        }
+        .buttons{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            font-size: 25px;
+            left: 40%;
+            transform: translateX(-50%);
+            span{
+                margin-top: 40px;
+                i{
+                    color: $secondary-color;
+                }
+            }
+            span:hover{
+                cursor: pointer;
+            }
+            span:last-child{
+                position: relative;
+                bottom: -150px;
+                left: 10px;
+            }
+        }
+    }
+    section{
+        grid-area: 1/2/2/3;
+        display: grid;
+        grid-template:  repeat(3, 1fr)/ repeat(3,33%);
+        gap: 8px;
+        
+        .cards{
+            background-color: $primary-main-color;
+            color: $primary-text-color;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow:0px 1px 5px $shadow-color;
+        }
+
+        .total{
+            grid-area: 1/1/2/3;
+            border-bottom: solid 3px $secondary-color;
+            
+                span{
+                 color:$second-text-color;
+                 font-size: 20px;
+                }
+                h1{
+                    font-size: 40px;
+                }
+        }
+        .retirar{
+            grid-area: 2/1/3/2;
+            border-bottom: solid 2px $border;
+            
+                span{
+                 color:$second-text-color;
+                 font-size: 20px;
+                }
+                h1{
+                    font-size: 30px;
+                }
+        }
+        .bonus{
+            grid-area: 2/2/3/3;
+            border-bottom: solid 2px $border;
+            
+                span{
+                 color:$second-text-color;
+                 font-size: 20px;
+                }
+                h1{
+                    font-size: 30px;
+                }
+        }
+        .information{
+            grid-area: 3/1/4/3;
+            border-bottom: solid 2px $border;
+            position: relative;
+                .profile-icon{
+                    position: absolute;
+                    left: 5%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    border: solid 6px $shadow-color;
+                    color: $shadow-color;
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    text-align: center;
+                    align-items: center;
+                }   
+            
+                 i{
+                    font-size: 100px;
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            
+                h1{
+                    font-size: 30px;
+                }
+
+                .allinfo{
+                    margin-left: 180px;
+                }
+                
+                
+                .infologin{
+                    display: flex;
+                    flex-direction: column;
+                    
+                    span{
+                        color: $primary-text-color;
+                     font-size: 20px;
+
+                     i{
+                        color:$second-text-color;
+                        font-size: 15px;
+                        font-family: Arial, Helvetica, sans-serif;
+                     }
+                    }
+                }
+
+                .logintime{
+
+                    span{
+                        color: $primary-text-color;
+                        font-size: 20px;
+                       
+                        i{ 
+                            margin-left: 5px;
+                        font-size: 15px;
+                        color:$second-text-color;
+                        }
+                    }
+                }
+            
+        }
+        .balance{
+            grid-area: 1/3/2/4;
+            border-bottom: solid 2px $border;
+
+            .info{
+                display: flex;
+                background-color: $primary-main-color;
+                width: 80%;
+                height: 35px;
+                box-shadow: 0px 2px 6px $shadow-color;
+                border-radius: 5px;
+                margin-bottom: 20px;
+                justify-content: center;
+                align-items: center;
+                
+                span{
+                    margin: 10px;
+                }
+                span:nth-child(1){
+                    font-size: 20px;
+                }
+            }
+
+            .deposit{
+                width: 80%;
+                height: 30px;
+                margin-top: 10px;
+                background-color: $secondary-color;
+                color: $primary-text-color;
+                border: none;
+                border-radius: 10px;
+                font-size: 15px;
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+            }
+            .deposit:hover{
+                transform: scale(1.03);
+                background-color: #b42e3c;
+            }
+            .retire{
+                width: 80%;
+                height: 30px;
+                margin-top: 20px;
+                border: $secondary-color solid 2px;
+                border-radius: 10px;
+                background-color: transparent;
+                color: #fff;
+                font-size: 15px;
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+            }
+            .retire:hover{
+                transform: scale(1.03);
+            }
+        }
+        .blocked{
+            grid-area: 2/3/3/4;
+            border-bottom: solid 2px $border;
+            
+                span{
+                 color:$second-text-color;
+                 font-size: 20px;
+                }
+                h1{
+                    font-size: 30px;
+                }
+        }
+        .password{
+            grid-area: 3/3/4/4;
+            border-bottom: solid 2px $border;
+            
+                span{
+                 color:$second-text-color;
+                 font-size: 20px;
+                }
+                span:last-child{
+                    display: none;
+                }
+        }
+
+    }
+
+}
+
+@media  screen and (min-width: 700px) and (max-width: 1025px) {
+    
+main{
+    width: 95%;
+    
+    aside{
+        .play{
+            h2{
+                margin-left: 30px;
+                font-size: 40px;
+                margin-bottom: 0px;
+            }
+        }
+        .buttons{
+            font-size: 16px;
+            
+        }
+    }
+    section{
+        .information{
+                .allinfo{
+                    margin-left: 190px;
+                }
+                
+        }
+
+    }
+
+}
+
+}
+
+
+@media  screen and (max-width: 699px) {
+    
+header{
+    height: 100px;
+    width: 100vw;
+    color: $primary-text-color;
+   
+    border-bottom: solid 1px $border;
+    .info{
+        height: 100%;
+        width: 95%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        display: flex;
+
+        h2{
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .buttons{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 30px;
+            right: 130px;
+            display: flex;
+            align-items: center;
+            width: 30%;
+            span{
+              font-size: 15px;
+            } 
+            span:hover{
+                transform: scale(1.03);
+            }
+            label{
+                margin-right: 5px;
+            }
+            #deposit{
+                position: relative;
+                height: 30px;
+                width: 30px;
+                    
+                }
+            }
+        }
+
+    }
+
+main{
+    position: relative;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    
+    
+        aside{
+            background-color: #992b36;
+            color: $primary-text-color;
+            border-radius: 10px;
+            display: flex;
+            font-size: 20px;
+            border-bottom: solid 2px $border;
+            width: 100%;
+            height: 200px;
+            margin-bottom: 200px;
+
+
+            .play{ 
+                align-self: center;
+                border: none;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                margin: 0;
+                
+            }
+            .buttons{
+               
+                display: none;
+            
+    }
+}
+    section{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;        
+        .cards{
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .total{
+            grid-area: 1/1/2/3;
+            border-bottom: solid 3px $secondary-color;
+            
+                span{
+                 color:$second-text-color;
+                 font-size: 20px;
+                }
+                h1{
+                    font-size: 40px;
+                }
+        }
+        .retirar{
+            grid-area: 2/1/3/2;
+            border-bottom: solid 2px $border;
+            
+                span{
+                 color:$second-text-color;
+                 font-size: 20px;
+                }
+                h1{
+                    font-size: 30px;
+                }
+        }
+        .bonus{
+            
+                span{
+                 color:$second-text-color;
+                 font-size: 20px;
+                }
+                h1{
+                    font-size: 30px;
+                }
+        }
+        .information{
+            position: relative;
+                .profile-icon{
+                    position: absolute;
+                    left: 20%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    border: solid 6px $shadow-color;
+                    color: $shadow-color;
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    text-align: center;
+                    align-items: center;
+                }   
+            
+                 i{
+                    font-size: 50px;
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            
+                h1{
+                    font-size: 30px;
+                }
+
+                .allinfo{
+                    margin-left: 180px;
+                }
+                
+                
+                .infologin{
+                    display: flex;
+                    flex-direction: column;
+                    
+                    span{
+                        color: $primary-text-color;
+                     font-size: 20px;
+
+                     i{
+                        color:$second-text-color;
+                        font-size: 15px;
+                        font-family: Arial, Helvetica, sans-serif;
+                     }
+                    }
+                }
+
+                .logintime{
+
+                    span{
+                        color: $primary-text-color;
+                        font-size: 20px;
+                       
+                        i{ 
+                            margin-left: 5px;
+                        font-size: 15px;
+                        color:$second-text-color;
+                        }
+                    }
+                }
+            
+        }
+        .balance{
+
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 20px;
+            padding-top: 20px;
+
+            .info{
+            }
+
+            .deposit{
+            }
+            .deposit:hover{
+                
+            }
+            .retire{
+                
+            }
+            .retire:hover{
+            }
+        }
+        .blocked{
+            grid-area: 2/3/3/4;
+            border-bottom: solid 2px $border;
+            
+                span{
+                 color:$second-text-color;
+                 font-size: 20px;
+                }
+                h1{
+                    font-size: 30px;
+                }
+        }
+        .password{
+            
+            span{
+                margin: 10px;
+                 color:$primary-text-color;
+                 font-size: 20px;
+            }
+            span:last-child{
+                display: block;
+            }
+        }
+
+    }
+
+}
+
+    }
+    
+
